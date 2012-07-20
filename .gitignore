@@ -1,0 +1,26 @@
+# vi(m)
+*.swp
+
+# downloaded files
+*.tar.*
+*.gpg
+*.sum
+
+download/*
+!download/README.TXT
+!download/download-helper.sh
+
+binutils-*/
+gcc-*/
+newlib-*/
+expat-*/
+mpfr-*/
+gdb-*/
+gmp-*/
+mpc-*/
+
+# built files
+addontools
+install
+*-ready.txt
+*-temp.txt
