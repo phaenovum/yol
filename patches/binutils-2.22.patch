@@ -1,0 +1,27 @@
+diff -Naur binutils-2.22/binutils/dwarf.c binutils-2.22-arm/binutils/dwarf.c
+--- binutils-2.22/binutils/dwarf.c	2011-09-18 16:50:17 +0000
++++ binutils-2.22-arm/binutils/dwarf.c	2012-06-09 11:50:41 +0000
+@@ -5757,6 +5757,10 @@
+ 	p++;
+     }
+ }
++
++#if defined (__MINGW32__)
++extern char *optarg;
++#endif
+ 
+ void
+ dwarf_select_sections_by_letters (const char *letters)
+diff -Naur binutils-2.22/include/opcode/arm.h binutils-2.22-arm/include/opcode/arm.h
+--- binutils-2.22/include/opcode/arm.h	2011-05-31 14:12:55 +0000
++++ binutils-2.22-arm/include/opcode/arm.h	2012-06-09 11:51:29 +0000
+@@ -109,7 +109,8 @@
+ #define ARM_AEXT_V6KT2  (ARM_AEXT_V6T2 | ARM_EXT_V6K)
+ #define ARM_AEXT_V6ZT2  (ARM_AEXT_V6T2 | ARM_EXT_SEC)
+ #define ARM_AEXT_V6ZKT2 (ARM_AEXT_V6T2 | ARM_EXT_V6K | ARM_EXT_SEC)
+-#define ARM_AEXT_V7_ARM	(ARM_AEXT_V6KT2 | ARM_EXT_V7 | ARM_EXT_BARRIER)
++#define ARM_AEXT_V7_ARM	(ARM_AEXT_V6KT2 | ARM_EXT_V7 | ARM_EXT_BARRIER \
++   | ARM_EXT_OS)
+ #define ARM_AEXT_V7A	(ARM_AEXT_V7_ARM | ARM_EXT_V7A)
+ #define ARM_AEXT_V7R	(ARM_AEXT_V7_ARM | ARM_EXT_V7R | ARM_EXT_DIV)
+ #define ARM_AEXT_NOTM \

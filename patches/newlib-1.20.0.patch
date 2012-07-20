@@ -1,0 +1,21 @@
+diff -Naur newlib-1.20.0/libgloss/arm/Makefile.in newlib-1.20.0-arm/libgloss/arm/Makefile.in
+--- newlib-1.20.0/libgloss/arm/Makefile.in	2011-06-29 15:32:09 +0000
++++ newlib-1.20.0-arm/libgloss/arm/Makefile.in	2012-06-10 18:24:32 +0000
+@@ -93,7 +93,7 @@
+ # build a test program for each target board. Just trying to get
+ # it to link is a good test, so we ignore all the errors for now.
+ #
+-all: ${CRT0} ${LINUX_CRT0} ${LINUX_BSP} ${REDBOOT_CRT0} ${REDBOOT_OBJS} ${RDPMON_CRT0} ${RDPMON_BSP} ${RDIMON_CRT0} ${RDIMON_BSP}
++all: ${CRT0}
+ 
+ #
+ # here's where we build the test programs for each target
+@@ -146,7 +146,7 @@
+ 	rm -f Makefile config.status *~
+ 
+ .PHONY: install info install-info clean-info
+-install: ${CRT0_INSTALL} ${LINUX_INSTALL} ${REDBOOT_INSTALL} ${RDPMON_INSTALL} ${RDIMON_INSTALL} ${IQ80310_INSTALL}  ${PID_INSTALL}
++install: ${CRT0_INSTALL}
+ 
+ install-crt0:
+ 	${INSTALL_DATA} ${CRT0} $(DESTDIR)${tooldir}/lib${MULTISUBDIR}/$$x
