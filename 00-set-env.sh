@@ -27,7 +27,7 @@
 # This is done by a separate script, because if you have close your shell
 # you can set the environment again with this script only.
 #---------------------------------------------------------------------------------
-. _env-only.sh
+. ./_env-only.sh
 
 #---------------------------------------------------------------------------------
 # Extract source packages
