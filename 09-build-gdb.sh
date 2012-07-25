@@ -41,9 +41,10 @@ fi
 	--prefix=$prefix \
 	--disable-shared \
 	--disable-nls \
-	--disable-threads \
-   --with-libexpat-prefix=$addon_tools_dir \
-	|| { echo "Error configuring gdb"; exit 1; }
+        --disable-threads \
+        --with-libexpat-prefix=$addon_tools_dir/lib \
+        --with-libexpat \
+        || { echo "Error configuring gdb"; exit 1; }
 
 $MAKE || { echo "Error building gdb"; exit 1; }
 $MAKE install || { echo "Error installing gdb"; exit 1; }
