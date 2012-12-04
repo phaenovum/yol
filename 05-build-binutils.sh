@@ -48,6 +48,7 @@ fi
 	--disable-threads \
 	--enable-interwork \
 	--enable-multilib \
+        --without-zlib \
 	--with-gcc \
 	--with-gnu-as \
 	--with-gnu-ld \

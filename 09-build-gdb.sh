@@ -46,6 +46,7 @@ fi
 	--disable-shared \
 	--disable-nls \
         --disable-threads \
+        --without-zlib \
         --with-libexpat-prefix=$addon_tools_dir/lib \
         --with-libexpat \
         || { echo "Error configuring gdb"; exit 1; }

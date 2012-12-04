@@ -42,6 +42,7 @@ mkdir -p etc
 	--disable-newlib-supplied-syscalls \
 	--enable-interwork \
 	--enable-multilib \
+        --without-system-zlib \
 	|| { echo "Error configuring newlib"; exit 1; }
 
 $MAKE || { echo "Error building newlib"; exit 1; }

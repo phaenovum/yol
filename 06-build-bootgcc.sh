@@ -53,6 +53,7 @@ fi
 	--enable-languages=c,c++ \
 	--enable-interwork \
 	--enable-multilib \
+        --without-system-zlib \
 	--with-gcc \
 	--with-gnu-ld \
 	--with-gnu-as \
