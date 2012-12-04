@@ -21,6 +21,10 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA 
 # 
 
+# Setup the environment
+#---------------------------------------------------------------------------------
+. ./_env-only.sh
+
 #---------------------------------------------------------------------------------
 # strip binaries
 # strip has trouble using wildcards so do it this way instead
